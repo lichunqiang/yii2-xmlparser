@@ -1,12 +1,13 @@
 {
   "name": "light/yii2-xmlparser",
+  "version": "0.1.0",
   "description": "yii2 xml request parser",
   "require": {
     "php": ">=5.4.0",
-    "yiisoft/yii2": "~2.0@dev"
+    "yiisoft/yii2": "~2.0.*"
   },
   "require-dev": {
-    "phpunit/phpunit": "~4.6@dev"
+    "phpunit/phpunit": "~4.6.*"
   },
   "license": "MIT",
   "authors": [
