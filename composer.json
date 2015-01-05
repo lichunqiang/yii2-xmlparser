@@ -1,0 +1,24 @@
+{
+  "name": "light/yii2-xmlparser",
+  "description": "yii2 xml request parser",
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "~2.0@dev"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.6@dev"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lichunqiang",
+      "email": "light-li@hotmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "light\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
