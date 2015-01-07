@@ -19,6 +19,5 @@
     "psr-4": {
       "Light\\": "src/"
     }
-  },
-  "minimum-stability": "dev"
+  }
 }
