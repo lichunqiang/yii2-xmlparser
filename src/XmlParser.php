@@ -19,7 +19,7 @@ class XmlParser extends Object implements RequestParserInterface
     public function parse($rawBody, $contentType)
     {
         try {
-            return json_decode(json_encode((array)simplexml_load_string($rawBody, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+            return json_decode(json_encode(simplexml_load_string($rawBody, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
         } catch (Exception $e) {
             if ($this->throwException) {
                 throw new BadRequestHttpException($e->getMessage, 0, $e);

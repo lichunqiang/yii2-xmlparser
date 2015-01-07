@@ -2,7 +2,6 @@
 namespace Light;
 
 use yii\web\Request;
-use yii\web\BadRequestHttpException;
 
 class RequestTest extends \PHPUnit_Framework_TestCase
 {
@@ -66,13 +65,10 @@ eof;
 
         $this->assertEquals('toUser', $result['ToUserName']);
 
-        $this->assertEquals(['MediaId' => 'media_id'], $result['MediaId']);
+        $this->assertEquals('media_id', $result['Voice']['MediaId']);
     }
 
-    /**
-     * @expectedException BadRequestHttpException
-     */
-    public function testException()
+    public function testNoCData()
     {
         $request = new Request([
             'parsers' => [
@@ -80,22 +76,40 @@ eof;
             ],
         ]);
 
-        $request->setRawBody('test');
+        $xml_body = '<xml><ToUserName>test</ToUserName></xml>';
+        $request->setRawBody($xml_body);
 
-        $request->post();
+        $result = $request->post();
+
+        $this->assertArrayHasKey('ToUserName', $result);
     }
 
-    public function testNotThrowException()
-    {
-        $request = new Request([
-            'throwException' => false,
-            'parsers' => [
-                'application/xml' => XmlParser::className(),
-            ],
-        ]);
+    // /**
+    //  * @expectedException \yii\web\BadRequestHttpException
+    //  */
+    // public function testException()
+    // {
+    //     $request = new Request([
+    //         'parsers' => [
+    //             'application/xml' => XmlParser::className(),
+    //         ],
+    //     ]);
 
-        $request->setRawBody('test');
+    //     $request->setRawBody('<!DOCTYPE html>');
 
-        $this->assertEquals(null, $request->post());
-    }
+    //     $request->post();
+    // }
+
+    // public function testNotThrowException()
+    // {
+    //     $request = new Request([
+    //         'parsers' => [
+    //             'application/xml' => ['class' => XmlParser::className(), 'throwException' => false],
+    //         ],
+    //     ]);
+
+    //     $request->setRawBody('test');
+
+    //     $this->assertEquals(null, $request->post());
+    // }
 }
