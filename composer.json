@@ -1,6 +1,5 @@
 {
   "name": "light/yii2-xmlparser",
-  "version": "0.1.0",
   "description": "yii2 xml request parser",
   "require": {
     "php": ">=5.4.0",
@@ -21,9 +20,5 @@
       "Light\\": "src/"
     }
   },
-  "minimum-stability": "dev",
-  "repositories": [
-    {"type": "composer", "url": "http://pkg.phpcomposer.com/repo/packagist/"},
-    {"packagist": false}
-  ]
+  "minimum-stability": "0.1.0"
 }
