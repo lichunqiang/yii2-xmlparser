@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/lichunqiang/yii2-xmlparser.svg)](http://travis-ci.org/lichunqiang/php-wechat)
+[![Build Status](https://travis-ci.org/lichunqiang/yii2-xmlparser.svg)](http://travis-ci.org/lichunqiang/yii2-xmlparser)
 
 ## Install
 
