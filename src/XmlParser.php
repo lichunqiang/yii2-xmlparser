@@ -3,6 +3,7 @@ namespace Light;
 
 use yii\base\Object;
 use yii\web\RequestParserInterface;
+use yii\web\BadRequestHttpException;
 
 class XmlParser extends Object implements RequestParserInterface
 {
