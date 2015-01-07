@@ -20,5 +20,5 @@
       "Light\\": "src/"
     }
   },
-  "minimum-stability": "0.1.0"
+  "minimum-stability": "dev"
 }
