@@ -12,7 +12,7 @@ $ composer install
 or
 
 ```sh
-composer update
+$ composer update
 ```
 
 ## Usage
@@ -25,8 +25,8 @@ return [
     'components' => [
     'request' => [
         'parsers' => [
-	        	'text/xml' => 'light\XmlParser',
-	            'application/xml' => 'light\XmlParser',
+	        	'text/xml' => 'Light\XmlParser',
+	            'application/xml' => 'Light\XmlParser',
 	        ],
         ],
     ],
@@ -36,4 +36,6 @@ return [
 
 ## Test
 
-TBD
+```
+$ phpunit
+```
