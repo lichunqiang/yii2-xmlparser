@@ -39,3 +39,6 @@ return [
 ```
 $ phpunit
 ```
+## LICENSE
+
+[MIT](LICENSE)
