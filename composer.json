@@ -1,6 +1,8 @@
 {
   "name": "light/yii2-xmlparser",
   "description": "yii2 xml request parser",
+  "keywords": ["yii2", "xml", "parse", "request", "Request"],
+  "version": "0.1.2",
   "require": {
     "php": ">=5.4.0",
     "yiisoft/yii2": "2.0.*"

@@ -19,7 +19,7 @@ cache:
 
 # script run before anything
 before_script:
-    - composer global require "fxp/composer-asset-plugin:1.0.0-beta4"
+    - composer global require "fxp/composer-asset-plugin:1.0.0"
     - composer install
     - cp phpunit.xml.dist phpunit.xml
 
