@@ -1,5 +1,5 @@
 <?php
-namespace Light;
+namespace light\yii2;
 
 use yii\base\Object;
 use yii\web\BadRequestHttpException;

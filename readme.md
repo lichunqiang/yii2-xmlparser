@@ -25,8 +25,8 @@ return [
     'components' => [
     'request' => [
         'parsers' => [
-	        	'text/xml' => 'Light\XmlParser',
-	            'application/xml' => 'Light\XmlParser',
+	        	'text/xml' => 'light\yii2\XmlParser',
+	            'application/xml' => 'light\yii2\XmlParser',
 	        ],
         ],
     ],
