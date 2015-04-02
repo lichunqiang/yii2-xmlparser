@@ -38,7 +38,7 @@ class XmlParser extends Object implements RequestParserInterface
                 'line' => $latestError->line,
             );
             if ($this->throwException) {
-                throw new BadRequestHttpException($error);
+                throw new BadRequestHttpException($latestError->message);
             }
             return $error;
         }
