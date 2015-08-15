@@ -1,10 +1,17 @@
-<?php
-namespace light\yii2;
+<?php namespace light\yii2;
 
 use yii\base\Object;
 use yii\web\BadRequestHttpException;
 use yii\web\RequestParserInterface;
 
+/**
+ * The request parser for xml
+ *
+ * @package light\yii2
+ * @author lichunqiang <light-li@hotmail.com>
+ * @license MIT
+ * @version 0.2.11
+ */
 class XmlParser extends Object implements RequestParserInterface
 {
     /**
