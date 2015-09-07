@@ -5,19 +5,20 @@ use yii\web\Request;
 
 class RequestTest extends \PHPUnit_Framework_TestCase
 {
+    private $request;
+
     protected function setUp()
     {
         $_SERVER["CONTENT_TYPE"] = 'application/xml; UTF-8';
-    }
-
-    public function testOnelevel()
-    {
-        $request = new Request([
+        $this->request = new Request([
             'parsers' => [
                 'application/xml' => XmlParser::className(),
             ],
         ]);
+    }
 
+    public function testOnelevel()
+    {
         $xml_body = <<<eof
 <xml>
  <ToUserName><![CDATA[toUser]]></ToUserName>
@@ -29,9 +30,9 @@ class RequestTest extends \PHPUnit_Framework_TestCase
  </xml>
 eof;
 
-        $request->setRawBody($xml_body);
+        $this->request->setRawBody($xml_body);
 
-        $result = $request->post();
+        $result = $this->request->post();
 
         $this->assertArrayHasKey('MsgId', $result);
 
@@ -40,12 +41,6 @@ eof;
 
     public function testMultiLevel()
     {
-        $request = new Request([
-            'parsers' => [
-                'application/xml' => XmlParser::className(),
-            ],
-        ]);
-
         $xml_body = <<<eof
 <xml>
 <ToUserName><![CDATA[toUser]]></ToUserName>
@@ -57,9 +52,9 @@ eof;
 </Voice>
 </xml>
 eof;
-        $request->setRawBody($xml_body);
+        $this->request->setRawBody($xml_body);
 
-        $result = $request->post();
+        $result = $this->request->post();
 
         $this->assertArrayHasKey('ToUserName', $result);
 
@@ -70,16 +65,10 @@ eof;
 
     public function testNoCData()
     {
-        $request = new Request([
-            'parsers' => [
-                'application/xml' => XmlParser::className(),
-            ],
-        ]);
-
         $xml_body = '<xml><ToUserName>test</ToUserName></xml>';
-        $request->setRawBody($xml_body);
+        $this->request->setRawBody($xml_body);
 
-        $result = $request->post();
+        $result = $this->request->post();
 
         $this->assertArrayHasKey('ToUserName', $result);
     }
