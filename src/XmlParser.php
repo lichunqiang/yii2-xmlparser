@@ -15,7 +15,8 @@ use yii\web\RequestParserInterface;
 class XmlParser extends Object implements RequestParserInterface
 {
     /**
-     * If parser result as array, this is default
+     * If parser result as array, this is default,
+     * if you want to get object, set it to false.
      * @var boolean
      */
     public $asArray = true;
