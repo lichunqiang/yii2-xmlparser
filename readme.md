@@ -1,7 +1,7 @@
 
 [![Build Status](https://img.shields.io/travis/lichunqiang/yii2-xmlparser.svg?style=flat-square)](http://travis-ci.org/lichunqiang/yii2-xmlparser)
 [![version](https://img.shields.io/packagist/v/light/yii2-xmlparser.svg?style=flat-square)](https://packagist.org/packages/light/yii2-xmlparser)
-[![Download](https://img.shields.io/packagist/dd/light/yii2-xmlparser.svg?style=flat-square)](https://packagist.org/packages/light/yii2-xmlparser)
+[![Download](https://img.shields.io/packagist/dt/light/yii2-xmlparser.svg?style=flat-square)](https://packagist.org/packages/light/yii2-xmlparser)
 [![Issues](https://img.shields.io/github/issues/lichunqiang/yii2-xmlparser.svg?style=flat-square)](https://github.com/lichunqiang/yii2-xmlparser/issues)
 
 ## Overview
